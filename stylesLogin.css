@@ -1,0 +1,112 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+header {
+    background-color: rgb(255, 230, 0);
+    padding: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+header .logo img {
+    width: 150px;
+} 
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 120px);
+    padding: 0 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-right: 40px;
+    margin-top: 0;
+}
+
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    justify-self: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-form {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-form {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(52, 131, 250);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button[type="button"] {
+    background-color: #fff;
+    border: 1px solid rgb(169, 169, 169);
+    color: black;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 0 0 20px 0;
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .input-form {
+        font-size: 14px;
+    }
+
+    .btn-form {
+        font-size: 14px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
