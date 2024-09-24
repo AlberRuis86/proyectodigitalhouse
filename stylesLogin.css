@@ -68,19 +68,11 @@ label {
     margin-bottom: 10px;
 }
 
-button[type="button"] {
-    background-color: #fff;
-    border: 1px solid rgb(169, 169, 169);
-    color: black;
-}
 
 button:hover {
     opacity: 0.8;
 }
 
-a {
-    text-decoration: none;
-}
 
 @media (max-width: 480px) {
     main {
