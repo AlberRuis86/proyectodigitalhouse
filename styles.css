@@ -82,7 +82,7 @@ header .logo img {
   }
 
   header p {
-    font-size: 14px; */
+    font-size: 14px;
   }
 
   .search-bar {
@@ -142,11 +142,17 @@ main h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .based-on-last-visit, .offers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
+
 
 .product {
   display: inline-block;
