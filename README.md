@@ -6,7 +6,7 @@ Este proyecto es parte de las entregas del curso Full Stack que incluye la creac
 
 ### 1. TP02 - Estructura y Estilos Responsivos
 
-- **Archivos creados**: `home.html`, `styles.css`
+- **Archivos creados**: `home.html`, `styles.css`, `images`
 - **Descripción**: 
   - Se definió la estructura principal del sitio, creando la página de inicio con su respectivo archivo de estilos.
   - Se aplicaron reglas de diseño responsive para garantizar la visualización en diferentes dispositivos (desktop, tablet y mobile).
