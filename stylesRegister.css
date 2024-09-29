@@ -108,3 +108,61 @@ fieldset {
         padding: 15px;
     }
 }
+
+/* ****************FOOTER****************** */
+footer {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer section {
+    margin: 20px 0;
+  }
+  
+  footer h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+  
+  footer p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+  
+  
+  @media (max-width: 768px) {
+    footer {
+      padding: 15px;
+    }
+  
+    footer section {
+      margin: 15px 0;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    footer {
+      padding: 10px;
+    }
+  
+    footer section {
+      margin: 10px 0;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    p {
+      font-size: 12px;
+    }
+  }
