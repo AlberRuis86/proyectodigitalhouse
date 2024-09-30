@@ -61,6 +61,18 @@ header .logo img {
   display: block;
 }
 
+.credit-info {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.credit-info i {
+  margin-right: 8px;
+}
+
+
 .navbar ul {
   list-style: none;
   padding: 0;
@@ -70,6 +82,14 @@ header .logo img {
 .navbar ul li {
   display: inline;
   margin: 0 10px;
+}
+
+.navbar ul li a {
+  align-items: center;
+}
+
+.navbar ul li a i {
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
@@ -82,7 +102,7 @@ header .logo img {
   }
 
   header p {
-    font-size: 14px; */
+    font-size: 14px;
   }
 
   .search-bar {
@@ -136,12 +156,13 @@ header .logo img {
 main {
   background-color: rgb(235, 235, 235);
   padding: 20px;
+  text-align: center;
 }
 
-main h2 {
+.based-on-last-visit h2,
+  .offers h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  text-align: center;
 }
 
 .based-on-last-visit, .offers {
@@ -150,7 +171,6 @@ main h2 {
 
 .product {
   display: inline-block;
-  text-align: center;
   width: 200px;
   margin: 20px;
 }
@@ -158,6 +178,10 @@ main h2 {
 .product p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+}
+
+.product span {
+  font-weight: 600;
 }
 
 .product img {
@@ -180,12 +204,22 @@ main h2 {
     margin: 10px;
   }
 
-  main h2 {
-    font-size: 20px;
+  .based-on-last-visit h2,
+  .offers h2 {
+    font-size: 26px;
   }
 
   .product p {
     font-size: 14px;
+  }
+
+  .product p:nth-of-type(2) {
+    font-size: 20px;
+  }
+
+  .product span {
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 
@@ -194,20 +228,39 @@ main h2 {
     padding: 10px;
   }
 
+  body {
+    font-size: 12px;
+  }
+
+  /* Ajuste de títulos (h2) a 24px */
+  .based-on-last-visit h2,
+  .offers h2 {
+    font-size: 24px;
+  }
+
+  /* Ajuste de cuerpo de texto a 16px (descripciones de productos) */
+  .product p {
+    font-size: 16px;
+  }
+
+  /* Ajuste de precios a 18px */
+  .product p:nth-of-type(2) {
+    font-size: 18px;
+  }
+
+  /* Ajuste de descuentos a 16px */
+  .product span {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
   .product {
     width: calc(100% - 40px);
   }
 
-  .product p {
-    font-size: 12px;
-  }
-
-  .based-on-last-visit, .offers {
+  .based-on-last-visit,
+  .offers {
     text-align: center;
-  }
-
-  main h2 {
-    font-size: 18px;
   }
 }
 
