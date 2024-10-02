@@ -1,51 +1,53 @@
+:root {
+  --color-amarillo: #EAC926;
+  --color-azul: #03264C;
+  --color-celeste: #1259c3;
+  --color-gris-oscuro: #666;
+  --color-gris-claro: #ebebeb;
+  --color-verde: #39b54a;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100%;
 }
 
 /* ********************HEADER********************** */
 header {
-  background-color: rgb(255, 230, 0);
+  background-color: var(--color-amarillo);
   padding: 20px;
-  text-align: center;
   font-weight: 500;
-}
-
-header h1, header h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-}
-
-header p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 header .logo img {
   width: 150px;
 }
 
-.search-bar {
+#search-form {
   position: relative;
-  max-width: 100%;
+  max-width: 50%;
   width: 100%;
   display: flex;
-  margin-top: 10px;
+  justify-content: center;
+  margin: 10px auto;
 }
 
-.search-bar input {
+.search-input {
   font-family: 'Roboto', sans-serif;
   background-color: rgb(255, 255, 255);
-  border-radius: 8px;
-  padding: 10px 15px;
+  border-radius: 1px;
   border: 1px solid #ccc;
   flex-grow: 1;
-  padding-right: 40px;
 }
 
-.search-bar button {
+.search-btn {
   position: absolute;
   right: 15px;
   top: 50%;
@@ -55,7 +57,7 @@ header .logo img {
   cursor: pointer;
 }
 
-.search-bar button img {
+.search-img {
   width: 20px;
   height: 20px;
   display: block;
@@ -69,92 +71,136 @@ header .logo img {
 }
 
 .credit-info i {
-  margin-right: 8px;
+  margin-right: 5px;
 }
 
-
-.navbar ul {
-  list-style: none;
-  padding: 0;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   margin-top: 10px;
 }
 
+.navbar-left, .navbar-right {
+  display: flex;
+}
+
+.navbar-left, .navbar-right {
+  margin-right: auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .navbar ul li {
-  display: inline;
   margin: 0 10px;
 }
 
 .navbar ul li a {
-  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar ul li a:hover {
+  color: var(--color-azul);
 }
 
 .navbar ul li a i {
-  margin-left: 10px;
+  margin-left: 5px;
+}
+
+.burger-menu {
+  display: none;
 }
 
 @media (max-width: 768px) {
-  header {
-    padding: 15px;
+
+  header .logo img {
+    width: 100px;
   }
 
-  header h1, header h2 {
-    font-size: 20px;
+  .navbar {
+    font-size: 12px;
   }
 
-  header p {
-    font-size: 14px;
+  #search-form {
+    max-width: 50%;
+    width: 80%;
   }
 
-  .search-bar {
-    flex-direction: column;
-    align-items: center;
+  .search-img {
+    width: 12px;
+    height: 12px;
   }
 
-  .search-bar input {
-    width: 90%;
-    margin-bottom: 10px;
+  .credit-info {
+    font-size: 12px;
+  }
+  
+  .credit-info i {
+    margin-right: 4px;
   }
 
-  .navbar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-  }
-
-  .navbar ul li {
-    display: block;
-    margin: 5px 0;
+  .burger-menu {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   header {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  header h1, header h2 {
-    font-size: 18px;
+  .navbar {
+    display: none;
   }
 
-  header p {
-    font-size: 12px;
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    color: var(--color-celeste);
   }
 
-  .search-bar {
-    width: 100%;
+  .navbar.active {
+    display: block;
+    text-align: center;
   }
 
   .navbar ul {
-    font-size: 14px;
+    font-size: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #search-form {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+  }
+
+  .credit-info {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
-
 
 /* ****************MAIN******************* */
 
 main {
-  background-color: rgb(235, 235, 235);
+  background-color: var(--color-gris-claro);
   padding: 20px;
   text-align: center;
 }
@@ -232,23 +278,19 @@ main {
     font-size: 12px;
   }
 
-  /* Ajuste de títulos (h2) a 24px */
   .based-on-last-visit h2,
   .offers h2 {
     font-size: 24px;
   }
 
-  /* Ajuste de cuerpo de texto a 16px (descripciones de productos) */
   .product p {
     font-size: 16px;
   }
 
-  /* Ajuste de precios a 18px */
   .product p:nth-of-type(2) {
     font-size: 18px;
   }
 
-  /* Ajuste de descuentos a 16px */
   .product span {
     font-size: 16px;
     font-weight: 600;
@@ -284,6 +326,14 @@ footer h2 {
 footer p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+}
+
+footer i {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--color-celeste);
 }
 
 
