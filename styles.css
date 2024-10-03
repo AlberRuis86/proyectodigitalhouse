@@ -205,7 +205,6 @@ header .logo img {
 /* ****************MAIN******************* */
 
 main {
-  background-color: var(--color-gris-claro);
   padding: 20px;
   text-align: center;
   width: 90%;
