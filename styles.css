@@ -219,8 +219,12 @@ main {
 }
 
 .based-on-last-visit, .offers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
+
 
 .product {
   background-color: #fff;
