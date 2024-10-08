@@ -216,6 +216,7 @@ main {
 .offers h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 .based-on-last-visit, .offers {
