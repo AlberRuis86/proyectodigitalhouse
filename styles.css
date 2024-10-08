@@ -214,8 +214,11 @@ main {
 
 .based-on-last-visit h2,
 .offers h2 {
+  width: 100%;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .based-on-last-visit, .offers {
