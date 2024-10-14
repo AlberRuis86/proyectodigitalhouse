@@ -17,6 +17,7 @@ body {
 }
 
 /* ********************HEADER********************** */
+
 header {
   background-color: var(--color-amarillo);
   padding: 20px;
@@ -27,52 +28,79 @@ header {
   flex-wrap: wrap;
 }
 
+.logo-search-credit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header .logo-search-row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 2;
+}
+
+header .logo {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+
 header .logo img {
-  width: 150px;
+  width: 50%;
 }
 
 #search-form {
-  position: relative;
-  max-width: 50%;
-  width: 100%;
+  flex: 2;
   display: flex;
   justify-content: center;
-  margin: 10px auto;
+  margin-right: 10px;
+  position: relative;
+}
+
+#search-form form {
+  width: 50%;
+  position: relative;
 }
 
 .search-input {
   font-family: 'Roboto', sans-serif;
   background-color: rgb(255, 255, 255);
-  border-radius: 1px;
+  border-radius: 3px;
   border: 1px solid #ccc;
   flex-grow: 1;
+  width: 100%;
+  padding-right: 40px;
+  box-sizing: border-box;
 }
 
 .search-btn {
   position: absolute;
-  right: 15px;
-  top: 50%;
+  right: 6px;
+  top: 24%;
   transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .search-img {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   display: block;
 }
 
 .credit-info {
+  flex: 1;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  margin-left: 10px;
   text-align: center;
-  justify-content: center;
-}
-
-.credit-info i {
-  margin-right: 5px;
+  white-space: nowrap;
 }
 
 .navbar {
@@ -81,13 +109,12 @@ header .logo img {
   align-items: center;
   width: 100%;
   margin-top: 10px;
+  white-space: nowrap;
 }
 
-.navbar-left, .navbar-right {
+.navbar-left,
+.navbar-right {
   display: flex;
-}
-
-.navbar-left, .navbar-right {
   margin-right: auto;
 }
 
@@ -108,11 +135,7 @@ header .logo img {
 }
 
 .navbar ul li a:hover {
-  color: var(--color-azul);
-}
-
-.navbar ul li a i {
-  margin-left: 5px;
+  color: #fff;
 }
 
 .burger-menu {
@@ -120,35 +143,49 @@ header .logo img {
 }
 
 @media (max-width: 768px) {
-
-  header .logo img {
-    width: 100px;
-  }
-
-  .navbar {
-    font-size: 10px;
-  }
-
-  .navbar ul li {
-    display: flex;
+  header .logo {
+    flex: 2;
+    justify-content: flex-start;
+    margin-right: 10px;
   }
 
   #search-form {
-    max-width: 50%;
-    width: 80%;
+    flex: 2;
+    margin-right: 10px;
+    position: relative;
   }
 
-  .search-img {
-    width: 12px;
-    height: 12px;
+  .search-input {
+    width: 100%;
+    padding-right: 40px;
+  }
+
+  .search-btn {
+    position: absolute;
+    right: 3px;
+    top: 46%;
+    transform: translateY(-50%);
+  }
+
+  .logo-search-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
   .credit-info {
     font-size: 10px;
   }
-  
+
   .credit-info i {
     margin-right: 4px;
+  }
+
+  .navbar {
+    width: 100%;
+    font-size: 10px;
+    margin-top: 10px;
   }
 
   .burger-menu {
@@ -156,22 +193,66 @@ header .logo img {
   }
 }
 
+
 @media (max-width: 480px) {
+  
   header {
-    padding: 10px;
     display: flex;
     flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-search-credit {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .logo-search-row {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    flex: 1;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+  }
+
+  #search-form {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+  }
+
+  .credit-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .burger-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .burger-menu i {
+    background-color: var(--color-celeste);
+    padding: 4px;
+    border-radius: 4px;
+    color: #fff;
   }
 
   .navbar {
     display: none;
-  }
-
-  .burger-menu {
-    display: block;
-    cursor: pointer;
-    color: var(--color-celeste);
   }
 
   .navbar.active {
@@ -183,22 +264,6 @@ header .logo img {
     font-size: 10px;
     flex-direction: column;
     align-items: center;
-  }
-
-  #search-form {
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 10px auto;
-  }
-
-  .credit-info {
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 }
 
@@ -235,6 +300,20 @@ main {
   font-weight: 400;
 }
 
+.product p:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product p:nth-of-type(2) span {
+  flex-basis: 70%;
+  text-align: right;
+}
+
+.product p:nth-of-type(2) {
+  flex-basis: 30%;
+}
+
 .product span {
   font-weight: 600;
 }
@@ -248,6 +327,7 @@ main {
 }
 
 .product .details {
+  position: relative;
   border-top: 1px solid #ebebeb;
   padding: 15px;
 }
@@ -257,6 +337,9 @@ main {
   border: 1px solid var(--color-verde);
   border-radius: 50%;
   padding: 5px;
+  position: absolute;
+  top: -15px;
+  right: 20px;
 }
 
 span {

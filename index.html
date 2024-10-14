@@ -18,27 +18,40 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre" />
-        </a>
-      </div>
+      <div class="logo-search-credit">
+        <div class="logo-search-row">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="images/logo-mercado-liebre.svg"
+                alt="Logo de Mercado Liebre"
+              />
+            </a>
+          </div>
     
-      <form action="search-results.html" method="GET" id="search-form">
-        <input
-          class="search-input"
-          type="text"
-          name="query"
-          placeholder="Buscar productos, marcas y más..."
-        />
-        <button type="submit" class="search-btn">
-          <img class="search-img" src="images/search-icon.svg" alt="Buscar" />
-        </button>
-      </form>
+          <div id="search-form">
+            <form action="search-results.html" method="GET">
+              <input
+                class="search-input"
+                type="text"
+                name="query"
+                placeholder="Buscar productos, marcas y más..."
+              />
+              <button type="submit" class="search-btn">
+                <img
+                  class="search-img"
+                  src="images/search-icon.svg"
+                  alt="Buscar"
+                />
+              </button>
+            </form>
+          </div>
+        </div>
     
-      <div class="credit-info">
-        <i class="fa-solid fa-hand-holding-dollar"></i>
-        <p>Comprá en cuotas y sin tarjeta de crédito</p>
+        <div class="credit-info">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <p>Comprá en cuotas y sin tarjeta de crédito</p>
+        </div>
       </div>
     
       <div class="burger-menu">
@@ -90,7 +103,10 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10" />
+          <img
+            src="images/img-samsung-galaxy-s10.jpg"
+            alt="Samsung Galaxy S10"
+          />
           <div class="details">
             <i class="fa-solid fa-truck-fast"></i>
             <p>Samsung Galaxy S10</p>
@@ -106,7 +122,7 @@
           </div>
         </div>
       </section>
-    
+
       <section class="offers">
         <h2>Ofertas</h2>
         <div class="product">
@@ -126,7 +142,10 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10" />
+          <img
+            src="images/img-samsung-galaxy-s10.jpg"
+            alt="Samsung Galaxy S10"
+          />
           <div class="details">
             <i class="fa-solid fa-truck-fast"></i>
             <p>Samsung Galaxy S10</p>
@@ -172,11 +191,11 @@
     </footer>
 
     <script>
-      const burgerMenu = document.querySelector('.burger-menu');
-      const navbar = document.querySelector('.navbar');
-  
-      burgerMenu.addEventListener('click', () => {
-        navbar.classList.toggle('active');
+      const burgerMenu = document.querySelector(".burger-menu");
+      const navbar = document.querySelector(".navbar");
+
+      burgerMenu.addEventListener("click", () => {
+        navbar.classList.toggle("active");
       });
     </script>
   </body>
