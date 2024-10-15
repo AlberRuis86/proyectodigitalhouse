@@ -17,35 +17,35 @@ body {
 }
 
 /* ********************HEADER********************** */
-
 header {
   background-color: var(--color-amarillo);
-  padding: 20px;
-  font-weight: 500;
+  padding: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  font-weight: 500;
 }
 
 .logo-search-credit {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
 }
 
-header .logo-search-row {
+.logo-search-row {
   display: flex;
-  flex-wrap: nowrap;
-  flex: 2;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 header .logo {
-  flex: 2;
-  display: flex;
+  flex: 1;
   justify-content: flex-start;
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
 header .logo img {
@@ -53,11 +53,10 @@ header .logo img {
 }
 
 #search-form {
-  flex: 2;
+  flex: 1;
+  justify-content: flex-end;
   display: flex;
-  justify-content: center;
-  margin-right: 10px;
-  position: relative;
+  align-items: center;
 }
 
 #search-form form {
@@ -79,7 +78,7 @@ header .logo img {
 .search-btn {
   position: absolute;
   right: 6px;
-  top: 24%;
+  top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -94,178 +93,215 @@ header .logo img {
 }
 
 .credit-info {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: 10px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 10px;
-  white-space: nowrap;
+  margin-bottom: 10px;
 }
 
-.navbar-left,
-.navbar-right {
-  display: flex;
-  margin-right: auto;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar ul li {
-  margin: 0 10px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar ul li a:hover {
-  color: #fff;
+.credit-info i {
+  margin-right: 4px;
 }
 
 .burger-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.burger-menu i {
+  background-color: var(--color-celeste);
+  padding: 4px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.navbar {
   display: none;
 }
 
-@media (max-width: 768px) {
-  header .logo {
-    flex: 2;
-    justify-content: flex-start;
-    margin-right: 10px;
-  }
+.navbar.active {
+  display: block;
+  text-align: center;
+}
 
-  #search-form {
-    flex: 2;
-    margin-right: 10px;
-    position: relative;
-  }
+.navbar ul {
+  font-size: 10px;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
 
-  .search-input {
-    width: 100%;
-    padding-right: 40px;
-  }
+.navbar ul li a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
 
-  .search-btn {
-    position: absolute;
-    right: 3px;
-    top: 46%;
-    transform: translateY(-50%);
-  }
-
-  .logo-search-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .credit-info {
-    font-size: 10px;
-  }
-
-  .credit-info i {
-    margin-right: 4px;
-  }
-
-  .navbar {
-    width: 100%;
-    font-size: 10px;
-    margin-top: 10px;
-  }
-
-  .burger-menu {
-    display: none;
-  }
+.navbar ul li a i {
+  margin-left: 10px;
 }
 
 
-@media (max-width: 480px) {
-  
+@media (min-width: 481px) and (max-width: 768px) {
   header {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
   }
 
   .logo-search-credit {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .logo-search-row {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 10px;
   }
 
-  .logo {
-    flex: 1;
+  header .logo {
+    flex-basis: 50%;
     justify-content: flex-start;
+    margin-right: 10px;
     display: flex;
-    align-items: center;
   }
 
   #search-form {
-    flex: 1;
-    justify-content: flex-end;
+    flex-basis: 50%;
+    margin-right: 10px;
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
 
   .credit-info {
-    display: flex;
+    flex-basis: 50%;
+    font-size: 10px;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .burger-menu {
     display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  .burger-menu i {
-    background-color: var(--color-celeste);
-    padding: 4px;
-    border-radius: 4px;
-    color: #fff;
+    margin-top: 10px;
   }
 
   .navbar {
-    display: none;
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
   }
 
-  .navbar.active {
-    display: block;
-    text-align: center;
+  .navbar-left {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .navbar-right {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .navbar ul {
-    font-size: 10px;
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    margin: 0 10px;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .burger-menu {
+    display: none;
   }
 }
+
+@media (min-width: 769px) {
+  header {
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-search-credit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .logo {
+    flex-basis: 50%;
+    justify-content: flex-start;
+    margin-right: 10px;
+    display: flex;
+  }
+
+  #search-form {
+    flex-basis: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .credit-info {
+    flex-basis: 50%;
+    font-size: 12px;
+    justify-content: end;
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .navbar {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .navbar-left {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .navbar-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    margin: 0 10px;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
+
 
 /* ****************MAIN******************* */
 
