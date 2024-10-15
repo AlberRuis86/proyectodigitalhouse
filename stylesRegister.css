@@ -1,11 +1,3 @@
-.register-main {
-  background-color: #ccc;
-  padding: 20px;
-}
-
-.register-title {
-  text-align: center;
-}
 :root {
   --color-amarillo: #EAC926;
   --color-azul: #03264C;
@@ -13,6 +5,15 @@
   --color-gris-oscuro: #666;
   --color-gris-claro: #ebebeb;
   --color-verde: #39b54a;
+}
+
+.register-main {
+  background-color: #ccc;
+  padding: 20px;
+}
+
+.register-title {
+  text-align: center;
 }
 
 .register-form {
