@@ -315,6 +315,12 @@ main {
   margin: 0 auto;
 }
 
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .based-on-last-visit h2,
 .offers h2 {
   font-family: 'Roboto', sans-serif;
