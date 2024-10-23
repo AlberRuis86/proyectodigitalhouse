@@ -390,6 +390,31 @@ span {
   color: var(--color-verde);
 }
 
+.product .details p:first-of-type {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.product:hover .details p:first-of-type {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.product .details i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover .details i {
+  transform: rotate(90deg);
+}
+
+
 @media (max-width: 768px) {
   main {
     padding: 15px;
@@ -490,6 +515,11 @@ footer i {
   margin-bottom: 10px;
   text-align: center;
   color: var(--color-celeste);
+  transition: color 0.3s ease-in-out;
+}
+
+footer section:hover i {
+  color: var(--color-amarillo);
 }
 
 
